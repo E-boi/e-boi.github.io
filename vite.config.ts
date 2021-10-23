@@ -11,5 +11,10 @@ export default defineConfig({
 	},
 	build: {
 		minify: 'terser',
+		rollupOptions: {
+			output: {
+				assetFileNames: '[name].[ext]',
+			},
+		},
 	},
 });
