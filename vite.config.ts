@@ -11,7 +11,5 @@ export default defineConfig({
 	},
 	build: {
 		minify: 'terser',
-		cssCodeSplit: true,
-		reportCompressedSize: true,
 	},
 });
