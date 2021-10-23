@@ -1,0 +1,15 @@
+.projects {
+	margin-top: 1em;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.pork .repo-card {
+	width: 450px;
+}
+
+h1 {
+	justify-content: center;
+	display: flex;
+}
