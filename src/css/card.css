@@ -73,3 +73,31 @@
 	margin-right: 5px;
 	fill: white;
 }
+
+.cc-card {
+	background-color: var(--color-card-background);
+	border-style: solid;
+	border-color: var(--color-border-card);
+	border-width: 3px;
+	border-radius: 6px;
+	width: 400px;
+	padding: 16px;
+	min-height: 150px;
+	margin: 5px;
+}
+
+.cc-description {
+	font-size: 0.9rem;
+}
+
+.cc-footer {
+	font-size: 1rem;
+}
+
+.cc-stuff {
+	display: flex;
+}
+
+.cc-stuff p {
+	margin-right: 40px;
+}

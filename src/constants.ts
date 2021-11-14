@@ -10,3 +10,5 @@ export const porkPlugins = [
 	'powercord-LinkChannels',
 	'Privacy-Tab',
 ];
+export const CondomButton = 'https://raw.githubusercontent.com/yellowsink/cc-plugins/master/assets/condom_button.png';
+export const InstallButton = 'https://raw.githubusercontent.com/yellowsink/cc-plugins/master/assets/cumdump_button.png';
