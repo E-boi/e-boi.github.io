@@ -21,7 +21,7 @@ export default ({ repo }: { repo: CCPlugin }) => {
 					<img src={CondomButton} height={64} />
 				</a>
 				<p>Install from source: </p>
-				<a href={`https://send.cumcord.com/#${condomUrl}`} target='_blank'>
+				<a href={`https://send.cumcord.com/#https://${repo.url}`} target='_blank'>
 					<img src={InstallButton} height={64} />
 				</a>
 			</div>
