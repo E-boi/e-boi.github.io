@@ -107,29 +107,28 @@ export interface Repo {
 	watchers_count: number;
 }
 
-export type CCPlugin = [string, { author: string; description: string; hash: string; license: string; name: string }];
+export type CCPlugin = { author: string; description: string; hash: string; license: string; name: string; url: string };
 
-export async function fetchRepos() {
+export async function fetchRepos(): Promise<Repo[]> {
 	const res = await fetch('https://api.github.com/users/E-boi/repos');
 	const json = (await res.json()) as Repo[];
 	return json;
 }
 
-export async function fetchProjects() {
+export async function fetchProjects(): Promise<Repo[]> {
 	const repos = await fetchRepos();
 	const filteredRepos = repos.filter(m => projects.includes(m.name));
 	return filteredRepos;
 }
 
-export async function fetchPorkPlugin() {
+export async function fetchPorkPlugin(): Promise<Repo[]> {
 	const repos = await fetchRepos();
 	const filteredRepos = repos.filter(m => porkPlugins.includes(m.name));
 	return filteredRepos;
 }
 
-export async function fetchCumPlugins() {
-	const plugins = Object.entries(await (await fetch('https://cumcordplugins.github.io/Condom/plugins-large.json')).json()).filter(p =>
-		p[0].includes?.('e-boi.github.io/cumcord-plugins/')
-	);
-	return plugins as CCPlugin[];
+export async function fetchCumPlugins(): Promise<CCPlugin[]> {
+	const getPlugins: CCPlugin[] = await (await fetch('https://cumcordplugins.github.io/Condom/plugins-large.json')).json();
+	const plugins = getPlugins.filter((p: CCPlugin) => p.author === 'ugly-patootie#0611');
+	return plugins;
 }
