@@ -1,20 +1,10 @@
 import { defineConfig } from 'vite';
-import preact from '@preact/preset-vite';
+import solidPlugin from 'vite-plugin-solid';
 
 export default defineConfig({
-	assetsInclude: ['./assets/profile.png'],
-	plugins: [preact()],
-	server: {
-		fs: {
-			strict: true,
-		},
-	},
-	build: {
-		minify: 'terser',
-		rollupOptions: {
-			output: {
-				assetFileNames: '[name].[ext]',
-			},
-		},
-	},
+  plugins: [solidPlugin()],
+  build: {
+    target: 'esnext',
+    polyfillDynamicImport: false,
+  },
 });

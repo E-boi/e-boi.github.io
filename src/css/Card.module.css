@@ -1,0 +1,84 @@
+.card {
+  background-color: var(--color-card-background);
+  border-style: solid;
+  border-color: var(--color-border-card);
+  border-width: 3px;
+  border-radius: 6px;
+  width: 450px;
+  padding: 16px;
+  height: 180px;
+  margin: 5px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.cardHeader {
+  border-bottom: 2px solid var(--color-border-card);
+  padding-bottom: 7px;
+  font-size: 1.3rem;
+}
+
+.cardHeader a {
+  text-decoration: none;
+  color: white;
+}
+
+.cardHeader a:hover {
+  text-decoration: underline;
+}
+
+.cardDescription {
+  font-size: 0.9rem;
+  flex: auto;
+}
+
+.cardFooter {
+  height: 50px;
+  font-size: 0.9rem;
+  display: flex;
+  position: absolute;
+  bottom: -5px;
+  align-items: center;
+}
+
+.cardCCFooter {
+  justify-content: flex-end;
+  right: 10px;
+  bottom: 10px;
+}
+
+.cardButton {
+  background-color: #7289da;
+  border: none;
+  padding: 10px;
+  height: 40px;
+  border-radius: 21px;
+  margin-left: 10px;
+}
+
+.cardButton a {
+  color: white;
+  text-decoration: none;
+}
+
+.cardButton:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.cardGH {
+  display: flex;
+  margin-left: 20px;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+}
+
+.cardGH:hover {
+  text-decoration: underline;
+}
+
+.cardGH * {
+  margin: 0px 2px;
+}

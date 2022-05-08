@@ -1,0 +1,14 @@
+.inform {
+  text-align: center;
+  margin-top: 10rem;
+  font-size: 1.3rem;
+}
+
+.inform a {
+  text-decoration: none;
+  color: navajowhite;
+}
+
+.inform a:hover {
+  text-decoration: underline;
+}
